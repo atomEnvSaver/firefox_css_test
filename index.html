@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<title>サイト</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="icon" type="image/png" href="https://slc-mie.com/favicon.ico" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<link rel="stylesheet" href="css/bootstrap4.min.css">
+<link rel="stylesheet" href="./css/style.css">
+<script src="./js/jquery.js"></script>
+</head>
+<body>
+<header>
+    <div class="container-fluid position-relative px-0">
+        <div class="container">
+            <div class="row">
+                <div class="top_logo"><h1>LOGO</h1></div>
+                <div class="w-100"></div>
+                <div class="top_outer"><img src="./img/ie-400x327.png" alt="" class="img-fluid"></div>
+            </div>
+        </div>
+        <div class="mod-gnav position-absolute w-100 top-info" style="bottom: 0px;">
+            <div class="position-relative pt-5">
+                <div class="half bg-info"></div>
+                <div class="container" style="text-align: center;">
+                    <div class="position-relative text-center bg-info"> <img src="img/slclogo2.png" alt="" class="underlogo"> </div>
+                </div>
+                <div class="bg-info py-3 hambergerWrapper">
+                    <div class="container px-0">
+                        <nav class="navbar navbar-expand-md navbar-light px-md-0 mb-0">
+                            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#Navbar" aria-controls="Navbar" aria-expanded="false" aria-label="ナビゲーションの切替"> 
+                                <span class="navbar-toggler-icon"></span>
+                                <span class="navbar-toggler-icon"></span>
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="Navbar">
+                                <ul class="navbar-nav w-100 justify-content-around" id="mainMenu">
+                                    <li class="nav-item"><a class="nav-link text-info" href="#sec3">News（TWT）</a></li>
+                                    <li class="nav-item"><a class="nav-link text-info" href="#sec1">About US</a></li>
+                                    <li class="nav-item"><a class="nav-link text-info" href="#sec2">Pics</a></li>
+                                    <li class="nav-item"><a class="nav-link text-info" href="#sec5">Works</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<main> 
+    <section class="position-relative pt-5">
+        <h2 class="h3 dot font-weight-bold pt-3 pb-5 px-0 mb-0">Welcome!!</h2>
+    </section>
+    <section class="position-relative pt-5">
+        <h2 class="h3 dot font-weight-bold pt-3 pb-5 px-0 mb-0">AboutUS</h2>
+    </section>
+</main>
+
+<nav>
+    <p id="page-top" style="display: none;z-index: 99;">
+    	<a href="#"></a>
+    </p>
+</nav>
+
+<script>
+//トップへ戻るボタン
+
+$(function () {
+  var topBtn = $('#page-top');
+  topBtn.hide();
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+      topBtn.fadeIn();
+    } else {
+      topBtn.fadeOut();
+    }
+  });
+  if (navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)) {
+    $(function () {
+      $('#page-top').hide();
+    });
+  }
+  //スクロールしてトップ
+  topBtn.click(function () {
+    $('body,html').animate(
+      {
+        scrollTop: 0,
+      },
+      500
+    );
+    return false;
+  });
+});
+</script>
+</body>
+</html>
